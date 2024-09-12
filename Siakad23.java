@@ -9,7 +9,7 @@ public class Siakad23 {
         String nama, nim;
         char kelas;
         byte absen;
-        double nilaiKuis, nilaiTugas, nilaiUjian, nilaiAkhir;
+        double nilaiKuis, nilaiTugas, nilaiUas, nilaiUts, nilaiAkhir;
         System.out.print("Masukkan nama");
         nama = sc.nextLine();
         System.out.print("Masukkan NIM");
@@ -22,9 +22,11 @@ public class Siakad23 {
         nilaiKuis = sc.nextDouble();
         System.out.print("Masukkan nilai tugas: ");
         nilaiTugas = sc.nextDouble();
-        System.out.print("Masukkan nilai ujian: ");
-        nilaiUjian = sc.nextDouble();
-        nilaiAkhir = (nilaiKuis + nilaiTugas + nilaiUjian) / 3;
+        System.out.print("Masukkan nilai uts: ");
+        nilaiUts = sc.nextDouble();
+        System.out.print("Masukkan nilai uas: ");
+        nilaiUas = sc.nextDouble();
+        nilaiAkhir = (nilaiKuis*20/100)+(nilaiTugas*15/100)+(nilaiUts*30/100)+(nilaiUas*35/100);
         System.out.println("Nama: " + nama + " NIM: " + nim);
         System.out.println("Kelas: " + kelas + " Absen: " + absen);
         System.out.println("Nilai akhir: " + nilaiAkhir);
